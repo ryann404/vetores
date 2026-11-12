@@ -8,35 +8,50 @@
 <body>
     
     <script>
+
+        // CRIAÇÃO AGENDA
         let minhaAgenda = ["\n 5h - Acordar", "\n 6h - Tirar leite da vaca", "\n 7h - Tomar café da manhã","\n 8h - Estudar", "\n 11h - Arrumar para a escola", "\n 12h - Ir para a escola", "\n 22h - Dormir"]
 
         console.log(`Minha agenda: ${minhaAgenda}`)
         
+        
+        // LENGHT
         let quantidade = minhaAgenda.length
         console.log(`Você tem ${quantidade} tarefas pendentes`);
         
+        // PUSH
         let tarefaUrgente = "\n 9h - Ir pro médico"
         minhaAgenda.push(tarefaUrgente)
-        
         quantidade = minhaAgenda.length
         console.log(`Tarefa Urgente: ${tarefaUrgente} \n Tarfeas pendentes: ${quantidade}`);
         
+        // SORT
         minhaAgenda.sort()
         console.log(`Minha Agenda organizada com sort: ${minhaAgenda}`); 
         
+        // SHIFT
         console.log(`Item removido: ${minhaAgenda[0]}`)
         minhaAgenda.shift()
         quantidade = minhaAgenda.length
+
         console.log(`Você tem ${quantidade} tarefas pendentes`);
-        
         console.log(`Minha Agenda: ${minhaAgenda}`); 
         
+        // POP
         quantidade = minhaAgenda.length - 1
         console.log(`Item removido: ${minhaAgenda[quantidade]}`)
         minhaAgenda.pop()
-        
         quantidade = minhaAgenda.length
         console.log(`Minha Agenda: ${minhaAgenda} \n \n Você tem ${quantidade} tarefas pendentes.`); 
+
+        // REMOVER ULTIMO ÍNDICE
+        console.log("remover");
+        
+        quantidade = Math.round(minhaAgenda.length / 2)
+        console.log(`Tarefa removida. ${minhaAgenda[quantidade]}`);
+        minhaAgenda.splice(quantidade, 1)
+        console.log(`Minha Agenda: ${minhaAgenda}`); 
+        
 
         
         

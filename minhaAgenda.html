@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Agenda Virtual</title>
+</head>
+<body>
+    
+    <script>
+        let minhaAgenda = ["\n 5h - Acordar", "\n 6h - Tirar leite da vaca", "\n 7h - Tomar café da manhã","\n 8h - Estudar", "\n 11h - Arrumar para a escola", "\n 12h - Ir para a escola", "\n 22h - Dormir"]
+
+        console.log(`Minha agenda: ${minhaAgenda}`)
+        
+        let quantidade = minhaAgenda.length
+        console.log(`Você tem ${quantidade} tarefas pendentes`);
+        
+        let tarefaUrgente = "\n 9h - Ir pro médico"
+        minhaAgenda.push(tarefaUrgente)
+        
+        quantidade = minhaAgenda.length
+        console.log(`Tarefa Urgente: ${tarefaUrgente} \n Tarfeas pendentes: ${quantidade}`);
+        
+        minhaAgenda.sort()
+        console.log(`Minha Agenda organizada com sort: ${minhaAgenda}`); 
+        
+        console.log(`Item removido: ${minhaAgenda[0]}`)
+        minhaAgenda.shift()
+        quantidade = minhaAgenda.length
+        console.log(`Você tem ${quantidade} tarefas pendentes`);
+        
+        console.log(`Minha Agenda: ${minhaAgenda}`); 
+        
+        quantidade = minhaAgenda.length - 1
+        console.log(`Item removido: ${minhaAgenda[quantidade]}`)
+        minhaAgenda.pop()
+        
+        quantidade = minhaAgenda.length
+        console.log(`Minha Agenda: ${minhaAgenda} \n \n Você tem ${quantidade} tarefas pendentes.`); 
+
+        
+        
+    </script>
+</body>
+</html>
